@@ -1,0 +1,6 @@
+SELECT [b_name], [s_id], [s_name], [sb_start], [sb_finish]
+FROM [books]
+	JOIN [subscriptions]
+	ON [books].[b_id] = [subscriptions].[sb_book]
+	JOIN [subscribers]
+	ON [subscriptions].[sb_id] = [subscribers].[s_id]
